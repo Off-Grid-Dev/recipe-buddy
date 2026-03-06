@@ -5,13 +5,16 @@ export default component$(() => {
   return (
     <>
       <h1>Recipe Buddy</h1>
-      <h2>Welcome <span>Geir</span></h2>
+      <h2>Chocolate Ice Cream Recipe</h2>
       <div>
-        <h3>Choose a recipe:</h3>
         <ul>
-          <li><button>Chocolate</button></li>
-          <li><button>Strawberry</button></li>
-          <li><button>Vanilla</button></li>
+          <li>
+          <p>
+            <span>1500</span>
+            <span>g</span>
+            <span>milk</span>
+          </p>
+          </li>
         </ul>
       </div>
     </>
@@ -19,11 +22,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Chocolate recipe",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Chocolate ice cream recipe",
     },
   ],
 };
