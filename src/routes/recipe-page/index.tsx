@@ -9,11 +9,11 @@ export default component$(() => {
       <div>
         <ul>
           <li>
-          <p>
-            <span>1500</span>
-            <span>g</span>
-            <span>milk</span>
-          </p>
+            <p>
+              <span>1500</span>
+              <span>g</span>
+              <span>milk</span>
+            </p>
           </li>
         </ul>
       </div>
