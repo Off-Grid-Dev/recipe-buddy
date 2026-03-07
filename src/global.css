@@ -1,23 +1,73 @@
-/* Resets */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-body {
-  box-sizing: border-box;
-}
-ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: inherit;
+:root {
+  /* Palette: Deep Slate, Cream, and Mint Accent */
+  --color-bg-primary: #0f1115;
+  --color-bg-secondary: #1a1d24;
+  --color-bg-tertiary: #252932;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #94a3b8;
+  --color-text-accent: #7dd3c0; /* Minty Fresh */
+  --color-text-accent-hover: #5dbdb0;
+  --color-text-success: #4ade80;
+  --color-text-error: #f87171;
+  --color-text-warning: #fbbf24;
+
+  --font-family-main: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-display: "Playfair Display", serif;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Color theme */
-:root {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  background: none;
+}
+
+input {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Utility for hiding scrollbars but keeping functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -1,0 +1,201 @@
+.overview-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  padding-bottom: 120px;
+}
+
+.overview-header {
+  margin-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-bg-tertiary);
+  padding-bottom: var(--spacing-lg);
+}
+
+.back-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: var(--spacing-md);
+  transition: var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--color-text-accent);
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.recipe-desc {
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin-bottom: var(--spacing-md);
+}
+
+.yield-control {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  width: fit-content;
+  border: 1px solid var(--color-bg-tertiary);
+}
+
+.yield-input {
+  background: transparent;
+  border: 1px solid var(--color-bg-tertiary);
+  color: var(--color-text-accent);
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .overview-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.group-title {
+  font-size: 0.75rem;
+  color: var(--color-text-accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-bg-tertiary);
+  padding-bottom: 4px;
+}
+
+.ingredients-list ul {
+  list-style: none;
+  margin-bottom: var(--spacing-lg);
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+}
+
+.ing-percent {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  width: 50px;
+  text-align: right;
+}
+
+.ing-amount {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  margin: 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.step-card {
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  gap: var(--spacing-md);
+  border-left: 3px solid var(--color-text-accent);
+}
+
+.step-number {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-accent);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.step-info p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.temp-badge,
+.time-badge {
+  font-size: 0.75rem;
+  background: var(--color-bg-tertiary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  width: fit-content;
+  color: var(--color-text-primary);
+}
+
+.aging-alert {
+  margin-top: var(--spacing-lg);
+  background: rgba(125, 211, 192, 0.1);
+  border: 1px solid var(--color-text-accent);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: var(--color-text-accent);
+}
+
+.overview-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-bg-primary);
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-bg-tertiary);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.start-btn {
+  background: var(--color-text-accent);
+  color: var(--color-bg-primary);
+  padding: 14px 40px;
+  border-radius: var(--radius-full);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  box-shadow: 0 0 15px rgba(125, 211, 192, 0.3);
+}
+
+.start-btn:hover {
+  background: var(--color-text-accent-hover);
+  transform: scale(1.02);
+}

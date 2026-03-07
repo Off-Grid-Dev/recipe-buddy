@@ -1,0 +1,249 @@
+.cook-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cook-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-top: var(--spacing-sm);
+}
+
+.exit-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px;
+}
+
+.exit-link:hover {
+  color: var(--color-text-error);
+}
+
+.header-info {
+  text-align: right;
+}
+
+.header-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.step-indicator {
+  font-size: 0.9rem;
+  color: var(--color-text-accent);
+  font-weight: 600;
+}
+
+.separator {
+  color: var(--color-text-secondary);
+  margin: 0 4px;
+}
+
+.cook-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  justify-content: center;
+}
+
+.scale-display-card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-bg-tertiary);
+  position: relative;
+  overflow: hidden;
+}
+
+.ingredient-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.group-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ingredient-name {
+  font-size: 2rem;
+  font-family: var(--font-family-display);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.weight-readout {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-md) 0;
+}
+
+.current-weight {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -2px;
+}
+
+.unit {
+  font-size: 2rem;
+  color: var(--color-text-secondary);
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.target-info {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.1rem;
+}
+
+.percent-tag {
+  font-size: 0.9rem;
+  color: var(--color-text-accent);
+  margin-left: 8px;
+}
+
+.status-message {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-md);
+  height: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.progress-track {
+  height: 10px;
+  background: var(--color-bg-tertiary);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: var(--spacing-md);
+}
+
+.progress-fill {
+  height: 100%;
+  transition:
+    width 0.2s ease,
+    background-color 0.3s ease;
+}
+
+.controls-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.control-btn {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.control-btn.secondary {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+.control-btn.secondary:active {
+  background: var(--color-bg-secondary);
+}
+
+.control-btn.primary {
+  background: var(--color-text-accent);
+  color: var(--color-bg-primary);
+  box-shadow: 0 0 15px rgba(125, 211, 192, 0.2);
+}
+
+.control-btn.primary:active {
+  transform: scale(0.98);
+}
+
+.control-btn.success {
+  background: var(--color-text-success);
+  color: var(--color-bg-primary);
+  grid-column: 1 / -1;
+}
+
+.adjustment-alert {
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid var(--color-text-error);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(248, 113, 113, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(248, 113, 113, 0);
+  }
+}
+
+.adjustment-alert h3 {
+  color: var(--color-text-error);
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.adjustment-alert p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.link-btn {
+  background: transparent;
+  color: var(--color-text-error);
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.cook-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-bg-tertiary);
+  margin-top: auto;
+}
+
+.nav-btn {
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.nav-btn:hover:not(:disabled) {
+  color: var(--color-text-primary);
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
