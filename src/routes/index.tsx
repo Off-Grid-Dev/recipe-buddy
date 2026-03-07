@@ -84,7 +84,7 @@ export default component$(() => {
             type="text"
             placeholder="Search flavors (e.g., Pistachio, Sorbet)..."
             value={searchQuery.value}
-            onInput$={(ev, el) => (searchQuery.value = el.value)}
+            onInput$={(_ev, el) => (searchQuery.value = el.value)}
             class="search-input"
           />
         </div>
