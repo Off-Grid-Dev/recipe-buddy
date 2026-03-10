@@ -41,7 +41,7 @@ export interface Recipe {
   ingredients: Ingredient[];
   steps: RecipeStep[];
   agingTimeHours: number;
-  // imageUrl?: string;
+  imageUrl?: string;
 }
 
 export interface ScaleState {

@@ -3,7 +3,6 @@ import { Link } from "@builder.io/qwik-city";
 import type { Recipe } from "~/types";
 import "./index.css";
 
-// Mock Data: Gelato Specific
 const MOCK_RECIPES: Recipe[] = [
   {
     id: "pistachio",
@@ -14,7 +13,8 @@ const MOCK_RECIPES: Recipe[] = [
     ingredients: [],
     steps: [],
     agingTimeHours: 12,
-    // imageUrl: "/images/pistachio.jpg",
+    imageUrl:
+      "https://plus.unsplash.com/premium_photo-1694116056814-edddc837a61d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGlzdGFjaGlvJTIwZ2VsYXRvfGVufDB8fDB8fHww",
   },
   {
     id: "stracciatella",
@@ -25,7 +25,8 @@ const MOCK_RECIPES: Recipe[] = [
     ingredients: [],
     steps: [],
     agingTimeHours: 6,
-    // imageUrl: "/images/stracciatella.jpg",
+    imageUrl:
+      "https://images.unsplash.com/photo-1706177175286-dfc625f8fabe?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RyYWNjaWF0ZWxsYSUyMGdlbGF0b3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     id: "lemon-sorbet",
@@ -36,7 +37,8 @@ const MOCK_RECIPES: Recipe[] = [
     ingredients: [],
     steps: [],
     agingTimeHours: 4,
-    // imageUrl: "/images/lemon.jpg",
+    imageUrl:
+      "https://images.unsplash.com/photo-1608322368735-b6b6ec262af7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGVtb258ZW58MHx8MHx8fDA%3D",
   },
   {
     id: "dark-choc",
@@ -47,7 +49,8 @@ const MOCK_RECIPES: Recipe[] = [
     ingredients: [],
     steps: [],
     agingTimeHours: 12,
-    // imageUrl: "/images/chocolate.jpg",
+    imageUrl:
+      "https://images.unsplash.com/photo-1593410974855-87ab9de04bb5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGNob2NvbGF0ZSUyMGdlbGF0b3xlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
 
@@ -99,6 +102,7 @@ export default component$(() => {
               class="recipe-card"
             >
               <div class="card-image-placeholder">
+                <img src={recipe.imageUrl} alt="whatever" />
                 <span>{recipe.name.charAt(0)}</span>
               </div>
               <div class="card-content">

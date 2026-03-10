@@ -118,6 +118,24 @@
   font-size: 4rem;
   color: var(--color-text-secondary);
   opacity: 0.5;
+  position: relative;
+  overflow: clip;
+  background-color: var(--color-text-accent);
+  background-blend-mode: multiply;
+
+  img {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    filter: brightness(25%);
+    font-size: 0;
+    color: transparent;
+  }
+
+  span {
+    position: relative;
+  }
 }
 
 .card-content {
